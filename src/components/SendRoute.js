@@ -5,12 +5,14 @@ import * as services from "../services/API";
 export default function SendRoute() {
   const [disciplines, setDisciplines] = useState([]);
   const [professors, setProfessors] = useState([]);
-  const [selectedIdDiscipline, setSelectedIdDiscipline] = useState(0);
-  const [selectedIdProfessor, setSelectedIdProfessor] = useState(0);
-  const [selectedIdCategory, setSelectedIdCategory] = useState(0);
+  const [selectedIdDiscipline, setSelectedIdDiscipline] = useState(1);
+  const [selectedIdProfessor, setSelectedIdProfessor] = useState(1);
+  const [selectedIdCategory, setSelectedIdCategory] = useState(1);
   const [name, setName] = useState("");
   const [link, setLink] = useState("");
   const navigate = useNavigate();
+
+console.log(selectedIdDiscipline)
 
   const body = {
     name: name,
@@ -68,11 +70,11 @@ export default function SendRoute() {
             setSelectedIdCategory(e.target.value);
           }}
         >
-          <option value={0}>P1</option>
-          <option value={1}>P2</option>
-          <option value={2}>P3</option>
-          <option value={3}>2ch</option>
-          <option value={4}>Outras</option>
+          <option value={1}>P1</option>
+          <option value={2}>P2</option>
+          <option value={3}>P3</option>
+          <option value={4}>2ch</option>
+          <option value={5}>Outras</option>
         </select>
         <select
           onChange={async (e) => {
@@ -80,7 +82,7 @@ export default function SendRoute() {
           }}
         >
           {disciplines.map((discipline, key) => (
-            <option value={key}>{discipline.name}</option>
+            <option value={key+1}>{discipline.name}</option>
           ))}
         </select>
         <select
@@ -89,7 +91,7 @@ export default function SendRoute() {
           }}
         >
           {professors.map((professor, key) => (
-            <option value={key}>{professor.name}</option>
+            <option value={key+1}>{professor.name}</option>
           ))}
         </select>
         <input
