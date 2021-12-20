@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -47,4 +47,4 @@ export default createGlobalStyle`
     body{
         background-color: #E7E7E7;
     }
-`
+`;

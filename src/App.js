@@ -19,4 +19,17 @@ const BodyApp = styled.div`
   flex-direction: column;
   box-sizing: border-box;
   padding: 10px;
+  z-index:-1;
+
+& form{
+    display: flex;
+    flex-direction: column;
+    
+    & input,select,button{
+        width: 300px;
+        margin:5px;
+        box-sizing: border-box;
+    }
+
+}
 `;
