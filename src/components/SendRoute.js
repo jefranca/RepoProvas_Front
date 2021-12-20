@@ -12,8 +12,6 @@ export default function SendRoute() {
   const [link, setLink] = useState("");
   const navigate = useNavigate();
 
-console.log(selectedIdDiscipline)
-
   const body = {
     name: name,
     category_id: selectedIdCategory,

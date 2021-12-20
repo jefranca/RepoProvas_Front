@@ -15,5 +15,8 @@ function getProfessors(idDiscipline) {
 function postExam(body) {
   return axios.post(`${BASE_URL}exams`, body);
 }
+function getExam(idProfessor){
+    return axios.get(`${BASE_URL}exams/discipline/${idProfessor}`);
+}
 
-export { getDisciplines, getProfessors, postExam };
+export { getDisciplines, getProfessors, postExam, getExam };
