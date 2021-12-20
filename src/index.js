@@ -4,6 +4,7 @@ import App from "./App";
 import Home from "./components/Home";
 import NoRoute from "./components/NoRoute";
 import SearchByDiscipline from "./components/SearchByDiscipline";
+import SearchByProfessor from "./components/SearchByProfessor";
 import SearchRoute from "./components/SearchRoute";
 import SendRoute from "./components/SendRoute";
 import ResetCss from "./styles/ResetCss";
@@ -18,6 +19,7 @@ render(
           <Route path="search" element={<Outlet />}>
             <Route index element={<SearchRoute/>}/>
             <Route path="discipline" element={<SearchByDiscipline/>}/>
+            <Route path="professor" element={<SearchByProfessor/>}/>
           </Route>
           <Route path="send" element={<SendRoute />} />
         </Route>
